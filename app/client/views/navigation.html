@@ -1,0 +1,26 @@
+<template name="navigation">
+  <nav class="clearfix mb2 white bg-black main-nav">
+    <div class="right">
+      {{#if currentUser}}
+        <a href="#!" class="btn py2 m0">{{username}}</a>
+        <a href="#!" class="btn py2 m0 logout">Logout</a>
+      {{else}}
+        <div class="main-nav__item">
+          <input type="checkbox" id="signIn">
+          <label for="signIn" class="btn py2 m0">Sign In</label>
+          <div class="modal modal--sign-in sm-col-2 border bg-lighter-gray">
+            {{> login}}
+          </div>
+        </div>
+        <div class="main-nav__item">
+          <input type="checkbox" id="register">
+          <label for="register" class="btn py2 m0">Register</label>
+          <div class="modal modal--sign-in sm-col-2 border bg-lighter-gray">
+            {{> register}}
+          </div>
+        </div>
+      {{/if}}
+    </div>
+    <div class="clearfix sm-hide"></div>
+  </nav>
+</template>

@@ -1,0 +1,46 @@
+:root {
+  --nav-height: 52px;
+  --color: #000;
+  --bass-blue: #0074d9;
+}
+
+body {
+  color: var(--color);
+}
+
+fieldset {
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.player.bg-blue {
+  color: #fff;
+}
+
+.main-nav {
+  position: relative;
+}
+
+.main-nav__item {
+  display: inline-block;
+}
+
+.main-nav input[type=checkbox] {
+  display: none;
+}
+
+.main-nav input[type=checkbox]:checked ~ .modal {
+  display: inline-block;
+}
+
+.main-nav input[type=checkbox]:checked + label {
+  background-color: var(--bass-blue);
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: var(--nav-height);
+  right: 0;
+  padding: 15px;
+}

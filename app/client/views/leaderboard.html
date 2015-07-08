@@ -1,0 +1,25 @@
+<template name="leaderboard">
+  {{#if currentUser}}
+    <table class="table-light border rounded">
+      <tbody>
+        {{#each player}}
+          <tr class="player {{selectedClass}}">
+            <td>{{name}}</td>
+            <td class="leaderboard-table-score">{{score}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    
+    {{#if showSelectedPlayer}}
+      <br><br>
+      <button class="btn btn-primary mb1 bg-green increment">Give {{showSelectedPlayer.name}} 5 Points</button>
+      <button class="btn btn-primary mb1 bg-red decrement">Take 5 Points from {{showSelectedPlayer.name}}</button>
+    {{/if}}
+    <br><br>
+  {{else}}
+    <p>Welcome to the Leaderboard app, please sign in to play.</p>
+  {{/if}}
+  
+  {{> addPlayerForm}}
+</template>
