@@ -2,6 +2,7 @@
   --nav-height: 52px;
   --color: #000;
   --bass-blue: #0074d9;
+  --bass-red: #ff4136;
 }
 
 body {
@@ -43,4 +44,11 @@ fieldset {
   top: var(--nav-height);
   right: 0;
   padding: 15px;
+}
+
+.error-message {
+  display: none;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: var(--bass-red);
 }
