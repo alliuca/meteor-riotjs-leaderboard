@@ -17,10 +17,10 @@ AccountsValidation = class AccountsValidation {
       [].forEach.call(inputFields, f => {
         if (f.value == '' && f.className.match(/is-error/) == null)
           f.className += ' is-error'
-        // else if (f.value != '')
-        //   f.className = f.className.replace(/ is-error/, '');
       });
       errMsg.innerHTML = 'Please check that the input fields aren\'t empty';
+    } else {
+      console.log('some other error');
     }
     errMsg.style.display = 'block';
   }

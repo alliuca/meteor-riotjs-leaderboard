@@ -1,6 +1,6 @@
 Meteor.publish('thePlayers', function(){
   var currentUserId = this.userId;
-  return Players.find({createdBy: currentUserId})
+  return Players.find({createdBy: currentUserId}, {sort: {score: -1, name: 1}})
 });
 
 Meteor.methods({

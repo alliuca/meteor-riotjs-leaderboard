@@ -6,8 +6,8 @@
 
 meteor-platform
 grigio:babel
-xaiki:riotjs
 kit:cssnext
 kit:basscss
 accounts-password
 accounts-ui-unstyled
+xaiki:riotjs-modified

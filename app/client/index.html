@@ -1,19 +1,14 @@
 <head>
-  <title>meteor-starter</title>
+  <meta charset="utf-8">
+  <title>Simple Leaderboard App</title>
+  <link rel="icon" type="image/ico" href="/favicon.ico">
 </head>
 <body>
   <header>
-    {{> navigation}}
+    <navigation></navigation>
   </header>
   <main class="container">
     <h1>Leaderboard</h1>
-    {{> leaderboard}}
-
-    <!-- {{#if currentUser}}
-      {{> dashboard}}
-    {{else}}
-      {{> register}}
-      {{> login}}
-    {{/if}} -->
+    <leaderboard></leaderboard>
   </main>
 </body>
